@@ -1,0 +1,98 @@
+
+/* Global styles used in all pages
+--------------------------------------------- */
+
+@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+html { font-size: 62.5%; }
+
+body {
+	font-family: $font-primary;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	background: $paleyellow;
+	color: $darkblue;
+}
+
+/* http://compass-style.org/reference/compass/helpers/selectors/#nest */
+#{headings()} {
+	font-family: $font-secondary;
+	font-weight: normal;
+	color: $darkgray;
+	@include text-shadow($paleryellow 1px 1px);
+}
+
+h1 {
+	font-size: 3.2rem;
+	color: lighten($darkblue, 25);
+	margin-bottom: 0.4rem;
+	border-bottom: 1px solid $lightgray;
+	padding-top: 10px;
+}
+
+h2 {
+	font-size: 2.2rem;
+	line-height: 100%;
+	margin: 20px 0 0 0;
+	color: $orange;
+}
+
+h3 {
+	font-size: 1.8rem;
+	line-height: 60%;
+	margin: 20px 0;
+	color: $orange;
+}
+
+a {
+	text-decoration: underline;
+	color: $mediumgray;
+	&:hover {
+		color: $orange;
+	}
+}
+
+// Navigation ---------------------------------------------------------------
+.navigation {
+  background: lighten($darkblue, 15);
+  ul.nav {
+    @include horizontal-list;
+    li {
+      list-style: none;
+      padding: 0;
+
+      i {
+        color: lighten($yellow, 20);
+        padding-right: 0.5em;
+      }
+
+      a {
+        @include single-transition(all, .5s, ease-out);
+        display: block;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: $paleryellow;
+
+        &:hover {
+          background: $orange;
+          a {
+            color: lighten($yellow, 30);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer ---------------------------------------------------------------
+footer {
+  color: $paleyellow;
+  background: lighten($darkblue, 3);
+  margin-top: 20px;
+  padding: {
+    top: 20px;
+    bottom: 100px;
+  }
+}
